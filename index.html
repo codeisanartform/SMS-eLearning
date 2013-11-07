@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Your Page Title Here :)</title>
+	<title>SMS eLearning :)</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/layout.css">
 	<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="stylesheet/font-awesome-4.0.1/css/font-awesome.css">
+	<link rel="stylesheet" href="stylesheets/font-awesome-4.0.1/css/font-awesome.css">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -47,18 +47,49 @@
 
 	<div class="container">
 		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">Skeleton</h1>
-			<h5><span class="icon-cogs"></span>Version 1.2</h5>
+			<!-- <h1 class="remove-bottom" style="margin-top: 40px">Skeleton</h1> -->
+			<img src="images/myTeacher-Logo.png">
+			<h5>Version 1.2 Web Platform</h5>
 			<hr />
 		</div>
+		<div class="sixteen columns tip-section row">
+			<div class="content-spacer">
+				<h2>Video Player Section</h2>
+					<div id="video">
+						<div id="video">
+							<div style="width: 640px; height: 480px;">
+						        <div id="flashContent">
+						            <script type="text/javascript">
+						                var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
+						                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
+						            </script>
+						        </div>
+						    </div>
+
+						</div>
+					</div>
+					
+					<div class="button"><span class="fa fa-backward"></span> Back</div>
+					<div id="play" class="button"><span class="fa fa-play"></span> Play</div> 
+					<div class="button"><span class="fa fa-pause"></span> Pause</div> 
+					<div class="button"><span class="fa fa-forward"></span> Skip</div> 
+					<div class="button"><span class="fa fa-volume-off"></span> Mute</div> 
+					<div class="button"><span class="fa fa-volume-down"></span> Volume Down</div> 
+					<div class="button"><span class="fa fa-volume-up"></span> Volume Up</div> 
+				</div>
+			</div>
+		
 		<div class="one-third column tip-section">
-			<h3>About Skeleton?</h3>
-			<p>Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
-			<div class="button"><span class="fa fa-cogs"></span>Play</div>
+			<div class="content-spacer">
+				<h3>About Skeleton?</h3>
+				<p>Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
+			</div>
 		</div>
 		<div class="one-third column tip-section">
-			<h3>Three Core Principles</h3>
-			<p>Skeleton is built on three core principles:</p>
+			<div class="content-spacer">
+				<h3>Three Core Principles</h3>
+				<p>Skeleton is built on three core principles:</p>
+			</div>
 			<ul class="square">
 				<li><strong>A Responsive Grid Down To Mobile</strong>: Elegant scaling from a browser to tablets to mobile.</li>
 				<li><strong>Fast to Start</strong>: It's a tool for rapid development with best practices</li>
@@ -66,8 +97,10 @@
 			</ul>
 		</div>
 		<div class="one-third column tip-section">
+			<div class="content-spacer">
 			<h3>Docs &amp; Support</h3>
-			<p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
+				<p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
+			</div>
 		</div>
 
 	</div><!-- container -->
@@ -76,4 +109,9 @@
 <!-- End Document
 ================================================== -->
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/sms_setup.js"></script>
+<script src="js/main.js"></script>
+
 </html>
