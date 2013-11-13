@@ -56,22 +56,37 @@
 			<div class="content-spacer">
 				<h2>Video Player Section</h2>
 					<div id="video">
-						<div id="video">
-							<div style="width: 640px; height: 480px;">
+						<div id="video-player">
+							<div  style="width: 850px; height: 370px;"><!-- THIS ONE -->
 						        <div id="flashContent">
 						            <script type="text/javascript">
 						                var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
-						                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
+						                document.write("<a href='http://www.adobe.com/go/getflashplayer'> <img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
 						            </script>
 						        </div>
 						    </div>
 
 						</div>
 					</div>
+					<!-- <input type="range" min="0" max="50" value="25" step="5" /> -->
+					
+					<div class="scrubber"> <div class="seeker"></div> </div>
+					<ul class="video-ui">
+						<li><span class="fa fa-play"></span> Play</li>
+						<li><span class="fa fa-pause"></span> Pause</li>
+						<li><span class="fa fa-pause"></span> Pause</li>
+						<li id="record"> <span class="fa fa-circle"></span> RECORD</li>
+						<li id="mircophone"> <span class="fa fa-microphone"></span> MIC</li>
+						<li id="camera"> <span class="fa fa-camera"></span> CAM</li>
+					</ul>
+					<ul id="microphoneList"></ul>
+					<ul id="cameraList"></ul>
+					<input type="range"/>
 					
 					<div class="button"><span class="fa fa-backward"></span> Back</div>
 					<div id="play" class="button"><span class="fa fa-play"></span> Play</div> 
-					<div class="button"><span class="fa fa-pause"></span> Pause</div> 
+					<div id="stop" class="button"><span class="fa fa-stop"></span> Stop</div> 
+					<div id="pause" class="button"><span class="fa fa-pause"></span> Pause</div> 
 					<div class="button"><span class="fa fa-forward"></span> Skip</div> 
 					<div class="button"><span class="fa fa-volume-off"></span> Mute</div> 
 					<div class="button"><span class="fa fa-volume-down"></span> Volume Down</div> 
@@ -108,10 +123,12 @@
 
 <!-- End Document
 ================================================== -->
-</body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/swfobject.js"></script>
 <script type="text/javascript" src="js/sms_setup.js"></script>
 <script src="js/main.js"></script>
+<!-- <script src="js/demo.js"></script> -->
+</body>
+
 
 </html>

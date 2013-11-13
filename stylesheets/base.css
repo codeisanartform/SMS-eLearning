@@ -123,13 +123,69 @@ div.sixteen.columns.tip-section.row {
 	li { line-height: 18px; margin-bottom: 12px; }
 	ul.large li { line-height: 21px; }
 	li p { line-height: 21px; }
+	
+	.scrubber {
+		width: 850px;
+		height: 10px;
+		z-index: 1;
+		position:relative;
+		background: rgb(241,231,103); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(241,231,103,1)), color-stop(100%,rgba(254,182,69,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(241,231,103,1) 0%,rgba(254,182,69,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(241,231,103,1) 0%,rgba(254,182,69,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(241,231,103,1) 0%,rgba(254,182,69,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(241,231,103,1) 0%,rgba(254,182,69,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645',GradientType=0 ); /* IE6-9 */
+	}
+	
+	.seeker {
+		width: 20px;
+		height: 20px;
+		border-radius: 10px;
+		z-index: 1999;
+		position:absolute;
+		top: -5px;
+		background: rgb(191,210,85); /* Old browsers */
+		background: -moz-radial-gradient(center, ellipse cover,  rgba(191,210,85,1) 0%, rgba(142,185,42,1) 50%, rgba(114,170,0,1) 51%, rgba(158,203,45,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(191,210,85,1)), color-stop(50%,rgba(142,185,42,1)), color-stop(51%,rgba(114,170,0,1)), color-stop(100%,rgba(158,203,45,1))); /* Chrome,Safari4+ */
+		background: -webkit-radial-gradient(center, ellipse cover,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-radial-gradient(center, ellipse cover,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* Opera 12+ */
+		background: -ms-radial-gradient(center, ellipse cover,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* IE10+ */
+		background: radial-gradient(ellipse at center,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		-webkit-box-shadow: 0 0 5px rgba(68,68,68,0.6);
+		-moz-box-shadow:    0 0 5px rgba(68,68,68,0.6);
+		box-shadow:         0 0 5px rgba(68,68,68,0.6);
+
+	}
+	
+	ul.video-ui {
+		width: 850px;
+		background: rgb(69,72,77); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	}
+	
+	ul.video-ui li {
+		display: inline-block;
+		padding: 10px;
+		margin: 0;
+		border-right: 1px solid #fff;
+	}
 
 /* #Images
 ================================================== */
 
 	img.scale-with-grid {
 		max-width: 100%;
-		height: auto; }
+		height: auto; 
+	}
 
 
 /* #Buttons
@@ -186,7 +242,7 @@ div.sixteen.columns.tip-section.row {
 		border-left: 1px solid #aaa; 
 		-webkit-box-shadow: 0px 0px 4px 0px #aaa; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
                 box-shadow: 0px 0px 4px 0px #aaa; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
-		}
+	}
 
 	.button:active,
 	button:active,
@@ -215,8 +271,8 @@ div.sixteen.columns.tip-section.row {
 	/* Fix for odd Mozilla border & padding issues */
 	button::-moz-focus-inner,
 	input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+	    border: 0;
+	    padding: 0;
 	}
 
 
