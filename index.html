@@ -12,6 +12,13 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
+    <!-- Firebase
+  ================================================== -->
+  	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+  	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+  	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+
 	<!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -87,10 +94,12 @@
 					<div id="play" class="button"><span class="fa fa-play"></span> Play</div> 
 					<div id="stop" class="button"><span class="fa fa-stop"></span> Stop</div> 
 					<div id="pause" class="button"><span class="fa fa-pause"></span> Pause</div> 
-					<div class="button"><span class="fa fa-forward"></span> Skip</div> 
-					<div class="button"><span class="fa fa-volume-off"></span> Mute</div> 
+					<div class="button"><span class="fa fa-forward"></span> Skip</div>
+					<div id="login-fb" class="button"><span class="fa fa-facebook-square"></span> LOGIN FB</div>
+					<div id="login-twitter" class="button"><span class="fa fa-twitter-square"></span> LOGIN TW</div>
+					<!-- <div class="button"><span class="fa fa-volume-off"></span> Mute</div> 
 					<div class="button"><span class="fa fa-volume-down"></span> Volume Down</div> 
-					<div class="button"><span class="fa fa-volume-up"></span> Volume Up</div> 
+					<div class="button"><span class="fa fa-volume-up"></span> Volume Up</div>  -->
 				</div>
 			</div>
 		
@@ -100,32 +109,33 @@
 				<p>Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
 			</div>
 		</div>
-		<div class="one-third column tip-section">
+		<div class="two-thirds column tip-section">
 			<div class="content-spacer">
-				<h3>Three Core Principles</h3>
-				<p>Skeleton is built on three core principles:</p>
+				<div id="boxscroll2">
+					<div id="contentscroll2">
+				    <!-- https://brads-sms-chat.firebaseio.com -->
+				    <div id='messagesDiv'></div>
+					</div>
+				</div>
+				<h4 id='nameInput'>Kanye</h4>
+			    <input type='text' id='messageInput' placeholder='Message'>
 			</div>
-			<ul class="square">
-				<li><strong>A Responsive Grid Down To Mobile</strong>: Elegant scaling from a browser to tablets to mobile.</li>
-				<li><strong>Fast to Start</strong>: It's a tool for rapid development with best practices</li>
-				<li><strong>Style Agnostic</strong>: It provides the most basic, beautiful styles, but is meant to be overwritten.</li>
-			</ul>
 		</div>
-		<div class="one-third column tip-section">
+		<!-- <div class="one-third column tip-section">
 			<div class="content-spacer">
 			<h3>Docs &amp; Support</h3>
 				<p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
 			</div>
 		</div>
-
+ -->
 	</div><!-- container -->
 
 
 <!-- End Document
 ================================================== -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/swfobject.js"></script>
 <script type="text/javascript" src="js/sms_setup.js"></script>
+<script type='text/javascript' src='js/jquery.nicescroll.min.js'></script>
 <script src="js/main.js"></script>
 <!-- <script src="js/demo.js"></script> -->
 </body>

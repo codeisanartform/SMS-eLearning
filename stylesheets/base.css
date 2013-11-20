@@ -59,6 +59,15 @@
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
 	}
+	
+	#boxscroll2 {
+		padding: 10px;
+		height: 150px;
+		width: 550px;
+		border: 2px solid #5EA020;
+		overflow: auto;
+		margin-bottom: 10px;
+	}
  	/*
 div.sixteen.columns.tip-section.row {
 	 	width: 900px;

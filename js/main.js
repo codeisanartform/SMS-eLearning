@@ -1,6 +1,7 @@
 var videoDuration;
 var timeStamp;
 var getVolume;
+var user;
 var position_percentage;
 var record = $("#record");
 var recording = false;
@@ -85,4 +86,74 @@ $(".scrubber").on("mousedown", function(e){
 	//console.log(time);
 	flash.setTime(time);
 });
+
+/* === FIREBASE ========================= */
+
+$("#boxscroll2").niceScroll("#contentscroll2",{cursorcolor:"#5EA020",cursoropacitymax:0.7,boxzoom:true,touchbehavior:true});  // Second scrollable DIV
+
+var chatRef = new Firebase('https://brads-sms-chat.firebaseio.com');
+var auth = new FirebaseSimpleLogin(chatRef, function(error, userParam) {
+	user = userParam;
+    console.log(user);
+});
+
+$( "#login-fb" ).click(function() {
+	if(user == typeof(undefined)) {
+		auth.login('facebook', {
+			rememberMe: true,
+			scope: 'email,user_likes'
+		});
+		//this.html("LOGOUT FB");
+		console.log("LOGGED IN FB!", user, this);
+	}else{
+		auth.logout();
+		//user = typeof(undefined);
+		console.log("LOGGED OUT FB!", user, this);
+	}
+});
+
+$( "#login-twitter" ).click(function() {
+	if(user === null){
+		auth.login('twitter', {
+	    rememberMe: true
+	    });
+	    $('#nameInput').html(user.displayName);
+	    $(this).html('<span class="fa fa-twitter-square"></span> LOGOUT TW');
+	    console.log("LOGGED IN TWITTER!", user, this);
+	}else{
+		auth.logout();
+		$('#nameInput').html("Please Log In");
+		$(this).html('<span class="fa fa-twitter-square"></span> LOGIN TW');
+		console.log("LOGGED OUT TWITTER!", user, this);
+	}
+	//console.log("OUT OF IF", user);
+});
+
+var myDataRef = new Firebase('https://brads-sms-chat.firebaseio.com');
+$('#messageInput').keypress(function (e) {
+	if (e.keyCode == 13) {
+	  var name = $('#nameInput').html();
+	  var text = $('#messageInput').val();
+	  myDataRef.push({name: name, text: text});
+	  $('#messageInput').val('');
+	}
+});
+
+myDataRef.on('child_added', function(snapshot) {
+	var message = snapshot.val();
+	displayChatMessage(message.name, message.text);
+});
+
+function displayChatMessage(name, text) {
+	var provider = user['provider'];
+	var img;
+	
+	if (provider == 'twitter'){
+		img = "";
+	}else if (provider == 'facebook') {
+		img = user['profilePic'];
+	}
+	$('<div/>').text(text).prepend($('<strong/>').text(name+': ')).appendTo($('#messagesDiv'));
+	$('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+};
 
